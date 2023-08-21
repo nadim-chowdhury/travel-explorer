@@ -18,11 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} bg-slate-50 text-slate-700 select-none`}
+      >
         <Header />
-
         <main>{children}</main>
-
         <Footer />
       </body>
     </html>

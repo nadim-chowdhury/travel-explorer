@@ -4,13 +4,15 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-white border-t">
-      <div className="container mx-auto py-6">
+      <div className="max-w-6xl mx-auto py-6">
         <div className="grid grid-cols-4 gap-6">
           {footerInfo.map((data) => (
             <div key={data.id} className="text-center">
-              <h3 className="text-lg font-bold pb-1">{data.name}</h3>
+              <h3 className="font-bold pb-1 mb-1 border-b rounded-full">
+                {data.name}
+              </h3>
 
-              <div className="flex flex-col text-slate-700">
+              <div className="flex flex-col text-sm">
                 {data.items.map((item) => (
                   <Link
                     href={item.toLowerCase().split(" ").join("-")}
@@ -26,10 +28,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="py-2 border-t">
+      <div className="py-2 border-t text-sm">
         <p className="text-center">
-          &copy; {new Date().getFullYear()} Design & Developed By&nbsp;
-          <span className="text-rose-500">Nadim Chowdhury</span>
+          &copy; {new Date().getFullYear()} All Rights Reserved By&nbsp;
+          <span className="text-rose-500">Nadim, Rafi, Tanvin</span>
         </p>
       </div>
     </footer>
