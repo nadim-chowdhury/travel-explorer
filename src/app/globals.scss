@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8fafc;
+}
+
+.header__icon {
+  @apply cursor-pointer transition-all duration-300 hover:text-rose-500;
+}
